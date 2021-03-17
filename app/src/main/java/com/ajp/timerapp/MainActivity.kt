@@ -10,6 +10,8 @@ import com.ajp.timerapp.databinding.ActivityMainBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.*
+import kotlin.concurrent.timer
+import kotlin.concurrent.timerTask
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -64,7 +66,12 @@ class MainActivity : AppCompatActivity() {
 
     fun setTimer(timeMillis: Long, text: String) {
         // After timeMillis milliseconds have elapsed, should print text to the log
-        Log.i("TimerApp", text)
+        fun Timer.schedule(
+                delay: timeMillis,
+                action: TimerTask.() -> Unit
+        ):Log.i("TimerApp", text)
+
+
     }
 
     fun String.isDouble(): Boolean {

@@ -69,8 +69,9 @@ class MainActivity : AppCompatActivity() {
         fun Timer.schedule(
                 delay: timeMillis,
                 action: TimerTask.() -> Unit
-        ) : Log.i("TimerApp", text)
-
+        ) : Log.i {
+        }("TimerApp", text)
+        timerTask {  }
 
     }
 
